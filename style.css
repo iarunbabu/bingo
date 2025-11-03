@@ -1,0 +1,78 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: #f4f4f4;
+  margin: 0;
+  padding: 10px;
+}
+table {
+  border-collapse: collapse;
+  margin: 20px auto;
+}
+td {
+  width: 60px;
+  height: 60px;
+  border: 2px solid #333;
+  font-size: 22px;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 10px;
+}
+td.filled {
+  background-color: #4caf50;
+  color: #fff;
+}
+td.marked {
+  position: relative;
+}
+td.marked::after {
+  content: "✕";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+  font-weight: bold;
+  color: #ff0000 !important;
+  text-shadow: 1px 1px 3px #fff, -1px -1px 3px #fff, 1px -1px 3px #fff, -1px 1px 3px #fff;
+  z-index: 2;
+  pointer-events: none;
+}
+.bingo-container {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 15px;
+}
+.bingo-letter {
+  width: 55px;
+  height: 55px;
+  line-height: 55px;
+  border: 3px solid #333;
+  border-radius: 10px;
+  font-size: 22px;
+  font-weight: bold;
+  background: #fff;
+  cursor: pointer;
+  user-select: none;
+}
+.bingo-letter.active {
+  background-color: gold;
+  color: #000;
+}
+button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  background: #333;
+  color: white;
+  cursor: pointer;
+  margin-right: 10px;
+}
+button:hover {
+  background: #555;
+}
