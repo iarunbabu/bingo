@@ -127,7 +127,6 @@ function handleCellClick(i, j, cell) {
     setTimeout(() => {
       if (confirm("🎯 All 25 cells are filled! Are you ready to start the game?")) {
         gameStarted = true;
-        alert("🎮 Game started! You can now only mark/unmark numbers as they're called!");
       }
     }, 100);
   }
